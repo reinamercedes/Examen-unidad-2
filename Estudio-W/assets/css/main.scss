@@ -1,0 +1,235 @@
+* {
+	font-family: Arial;
+}
+//variables
+$gray-head: #D7D7D7;
+$parrafo-color: #6A6A6A;
+$color-price: #F0F0F1;
+$dark-grey: #666666;
+
+//mixins
+@mixin data-team($align) {
+	padding: 3%;
+    padding-bottom: 0;
+    text-align: $align;
+    h4 {
+    	font-size: 15px;
+           font-weight: 600;
+    }
+    p {
+    	margin-top: 40px;
+    }
+    i {
+    	float: $align;
+    	margin-top: 25%;
+    }
+}
+
+@mixin section-style {
+	padding: 10% 2%;
+}
+@mixin p-style($color) {
+	p.p-style {
+		margin: 75px 0;
+		color: $color;
+	}
+}
+@mixin title-section($color) {
+	h2 {
+		color: $color;
+		font-weight: 600;
+        font-size: 40px;
+        margin-top: 0;
+        &:nth-child(2) {
+        	margin-top: -8px;
+        }
+	}
+	div.separator {
+		border: 1px solid $color;
+		width: 50px;
+        margin-top: 25px;
+	}
+}
+
+//placeholders
+
+//css del doc.
+#hero-image {
+	background-image: url("../images/home4.jpg");
+	background-size: 117% 100%;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: color;
+    border-bottom-color: black;
+	a.navbar-brand {
+		margin-top: 30px;
+	}
+	#bs-example-navbar-collapse-1 {
+		a {
+			margin-top: 50px;
+			color: white;
+			font-weight: 600;
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.36);
+			}
+		}
+	}
+	div.row.main-title {
+		h1,h4 {
+			text-align: center;
+		}
+		h1 {
+			color: white;
+			font-size: 65px;
+			margin-top: 10%;
+		}
+		h4 {
+			color: $gray-head;
+			font-size: 29px;
+			margin: 2% 0 26%;
+		}
+	}
+}
+#services {
+	@include section-style;
+	@include title-section(black);
+   	@include p-style($parrafo-color);
+   	.col-md-6 {
+   		.row {
+   			margin-bottom: 30px;
+   		}
+   		.col-md-2 {
+   			img {
+   				margin: 15px;
+   			}
+   		}
+   		.col-md-10 {
+   			h5 {
+   				color: #666666;
+   				font-weight: 600;
+   			}
+   		}
+   	}
+}
+#about {
+	background-image: url("../images/p15.jpg");
+	background-color: rgba(0, 0, 0, .7);
+    background-blend-mode: color;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: 2% 31%;
+	@include section-style;
+	@include title-section(white);
+   	@include p-style(white);
+    .col-md-6 {
+    	&:first-child {
+    		padding-right: 10%;
+    	}
+    }
+}
+#team {
+	@include section-style;
+	@include title-section(black);
+    .row:nth-child(2) {
+    	margin-top: 5%;
+    }
+    .col-md-3 {
+    	padding: 0;
+    }
+    .col-md-3.data-team-up {
+    	@include data-team(left);
+    }
+    .col-md-3.data-team-down {
+    	@include data-team(right);
+    }
+}
+#price {
+	@include section-style;
+	@include title-section(black);
+    .price-row {
+      margin-top: 5%;
+    }
+    .price {
+    	text-align: center;
+    	background-color: $color-price;
+    	.starter {
+        border: 1px solid $gray-head;
+    		h3 {
+    			color: $dark-grey;
+    		    font-weight: 600;
+    		}
+    		h1 {
+    			color: black;
+    			font-size: 85px;
+          span {
+            font-size: 36px;
+          }
+    		}
+    	}
+      .details {
+        .col-md-6 {
+          padding: 8%;
+
+        }
+      }
+      .order {
+        padding: 7% 0;
+        background-color: black;
+        color: white;
+      }
+    }
+}
+#contact {
+  @include section-style;
+  @include title-section(black);
+  @include p-style(black);
+  input {
+    width: 87%;
+    padding: 0.5%;
+    margin-bottom: 3%;
+  }
+  textarea {
+    padding: 1% 68% 7% 1%;
+    margin-bottom: 5%;
+  }
+  button {
+    border-style: none;
+    padding: 1% 2%;
+    background-color: #444444;
+    color: white;
+  }
+  .col-md-4 {
+    margin-top: 7%;
+    h5, h6.company {
+      font-weight: 600;
+      color: #444444;
+    }
+    h5 {
+      span {
+        font-weight: 100;
+      }
+    }
+    .row.contact-info {
+      h6 {
+        margin: 5% 0;
+      }
+    }
+    h6.company {
+      margin: 3% 0;
+      border-bottom: 1px solid;
+      width: 40%;
+      padding-bottom: 4%;
+    }
+  }
+}
+footer {
+  padding: 2% 0;
+  text-align: center;
+  background-color: $color-price;
+  h6 {
+    span {
+      text-decoration: underline;
+    }
+  }
+}

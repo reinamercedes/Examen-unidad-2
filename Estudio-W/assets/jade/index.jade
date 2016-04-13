@@ -1,0 +1,295 @@
+doctype
+html
+    head
+        meta(charset="UTF-8")
+        title Estudio W
+        link(rel="stylesheet", href="assets/css/bootstrap.css")
+        link(rel="stylesheet", href="assets/css/elegant.css")
+        link(rel="stylesheet", href="assets/css/main.css")
+        link(rel="stylesheet", href="assets/css/font-awesome.css")
+    body
+        //-mixins
+        mixin title-section(phrase1,phrase2)
+            h2=phrase1
+            h2=phrase2
+            div.separator
+        mixin p-style(parrafo)
+            p.p-style=parrafo
+        mixin data-team(nombre,profesion)
+            h4=nombre
+            h5=profesion
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem accusamus ullam illo nulla optio vel inventore minima ducimus, dolore. Sed sapiente, quos!
+            i.fa.fa-facebook
+            i.fa.fa-twitter
+            i.fa.fa-google
+            i.fa.fa-pinterest
+            i.fa.fa-linkedin
+
+        section#hero-image
+            div.container-fluid
+                div.row
+                    nav.navbar
+                        div.container-fluid
+                            div.navbar-header
+                                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                                    span.sr-only Toggle navigation
+                                    span.icon-bar
+                                    span.icon-bar 
+                                    span.icon-bar
+                                a.navbar-brand(href='#')
+                                    img(src="assets/images/w-logo.jpg", alt="logo tema")
+                            div#bs-example-navbar-collapse-1.collapse.navbar-collapse
+                                ul.nav.navbar-nav.navbar-right
+                                    li 
+                                        a(href='#hero-image') HOME 
+                                    li
+                                        a(href='#services') SERVICES
+                                    li
+                                        a(href='#about') ABOUT
+                                    li
+                                        a(href='#hero-image') PORTFOLIO
+                                    li
+                                        a(href='#team') TEAM
+                                    li
+                                        a(href='#hero-image') TESTIMONIAL
+                                    li
+                                        a(href='#price') PRICING
+                                    li
+                                        a(href='#contact') CONTACT
+                div.row.main-title
+                    h1 Stand Out From The Crowd
+                    h4 For photographer and freelancer who want to exclusively
+                     br 
+                     | showcase their products.
+        section#services 
+            div.container-fluid 
+                div.row
+                    div.col-md-6 
+                        img.img-responsive(src="assets/images/p15.jpg", alt="services image")
+                    div.col-md-6
+                        +title-section('Services','We Provide')
+                        +p-style('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, qui eaque. Eius quod qui a, sapiente aliquam adipisci, officiis beatae, fuga exercitationem labore minus culpa. Lorem ipsum dolor sit amet, consectetur adipisicing elit.') 
+                        div.row
+                            div.col-md-2
+                                img(src="assets/images/online-store15.png", alt="PSD template design")
+                            div.col-md-10
+                                h5 PSD TEMPLATE DESIGN
+                                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque ipsa dicta tempora, dolorum, totam, eos qui voluptates, fugiat facilis veritatis nihil aliquam suscipit quos. Nemo hic maiores sit ipsum.
+                        div.row
+                            div.col-md-2
+                                img(src="assets/images/mug16.png", alt="GRAPHICS DESIGN")
+                            div.col-md-10
+                                h5 GRAPHICS DESIGN
+                                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque ipsa dicta tempora, dolorum, totam, eos qui voluptates, fugiat facilis veritatis nihil aliquam suscipit quos. Nemo hic maiores sit ipsum.
+                        div.row
+                            div.col-md-2
+                                img(src="assets/images/photography88.png", alt="PHOTOGRAPHY")
+                            div.col-md-10
+                                h5 PHOTOGRAPHY
+                                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque ipsa dicta tempora, dolorum, totam, eos qui voluptates, fugiat facilis veritatis nihil aliquam suscipit quos. Nemo hic maiores sit ipsum.
+        section#about
+            div.container-fluid
+                div.row
+                    div.col-md-6
+                        +title-section('Welcome To','W Studio')
+                        +p-style('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quasi aliquid nam hic assumenda eveniet nihil fuga temporibus, necessitatibus alias mollitia maxime minus est dolore numquam aperiam repellat quia consequatur tempora odio autem blanditiis suscipit, provident quam. Eius tempora, facilis iste! Voluptates totam minima accusamus ipsam alias doloremque magnam facere reiciendis quas. Molestiae suscipit quis accusamus, voluptate tempore illum culpa.')
+                    div.col-md-6 
+                        video.img-responsive(src="assets/images/video.mp4", alt="video")
+        section#team
+            div.container-fluid
+                div.row
+                    +title-section('Meet The','Team')
+                div.row 
+                    div.col-md-3.image
+                        img.img-responsive(src="assets/images/member7.jpg", alt="team")
+                    div.col-md-3.data-team-up 
+                        +data-team('NETHANIEL GILROY','Founder & CEO')
+                    div.col-md-3.image
+                        img.img-responsive(src="assets/images/member8.jpg", alt="team")
+                    div.col-md-3.data-team-up
+                        +data-team('NAREK ROUBEN','Marketing Director')
+                div.row 
+                    div.col-md-3.data-team-down
+                        +data-team('SAMANTHA MILNER','Creative Director')
+                    div.col-md-3.image
+                        img.img-responsive(src="assets/images/member9.jpg", alt="team")
+                    div.col-md-3.data-team-down
+                        +data-team('LOUISE ALASTRIONA','Ui/UX Specialist')
+                    div.col-md-3.image
+                        img.img-responsive(src="assets/images/member10.jpg", alt="team")
+        section#price
+            div.container-fluid
+                div.row
+                    +title-section('Our Best','Offers')
+                div.row.price-row
+                    div.col-md-3
+                        div.price
+                            div.starter
+                                h3 Starter
+                                h1 $ 50
+                                 span /mo
+                            div.details
+                                div.row
+                                    div.col-md-6
+                                        img(src="assets/images/man88.png", alt="users")
+                                        br 
+                                        | 20 USERS
+                                    div.col-md-6
+                                        img(src="assets/images/rectangles29.png", alt="pages")
+                                        br 
+                                        | 10 PAGES
+                                div.row
+                                    div.col-md-6
+                                        img(src="assets/images/database22.png", alt="database")
+                                        br 
+                                        | 20 GB STORAGE 
+                                    div.col-md-6
+                                        img(src="assets/images/email162.png", alt="email")
+                                        br 
+                                        | 100 EMAILS
+                            div.order
+                                | ORDER NOW
+                    div.col-md-3
+                        div.price
+                            div.starter
+                                h3 Starter
+                                h1 $ 50
+                                 span /mo
+                            div.details
+                                div.row
+                                    div.col-md-6
+                                        img(src="assets/images/man88.png", alt="users")
+                                        br 
+                                        | 20 USERS
+                                    div.col-md-6
+                                        img(src="assets/images/rectangles29.png", alt="pages")
+                                        br 
+                                        | 10 PAGES
+                                div.row
+                                    div.col-md-6
+                                        img(src="assets/images/database22.png", alt="database")
+                                        br 
+                                        | 20 GB STORAGE 
+                                    div.col-md-6
+                                        img(src="assets/images/email162.png", alt="email")
+                                        br 
+                                        | 100 EMAILS
+                            div.order
+                                | ORDER NOW
+                    div.col-md-3
+                        div.price
+                            div.starter
+                                h3 Starter
+                                h1 $ 50
+                                 span /mo
+                            div.details
+                                div.row
+                                    div.col-md-6
+                                        img(src="assets/images/man88.png", alt="users")
+                                        br 
+                                        | 20 USERS
+                                    div.col-md-6
+                                        img(src="assets/images/rectangles29.png", alt="pages")
+                                        br 
+                                        | 10 PAGES
+                                div.row
+                                    div.col-md-6
+                                        img(src="assets/images/database22.png", alt="database")
+                                        br 
+                                        | 20 GB STORAGE 
+                                    div.col-md-6
+                                        img(src="assets/images/email162.png", alt="email")
+                                        br 
+                                        | 100 EMAILS
+                            div.order
+                                | ORDER NOW
+                    div.col-md-3
+                        div.price
+                            div.starter
+                                h3 Starter
+                                h1 $ 50
+                                 span /mo
+                            div.details
+                                div.row
+                                    div.col-md-6
+                                        img(src="assets/images/man88.png", alt="users")
+                                        br 
+                                        | 20 USERS
+                                    div.col-md-6
+                                        img(src="assets/images/rectangles29.png", alt="pages")
+                                        br 
+                                        | 10 PAGES
+                                div.row
+                                    div.col-md-6
+                                        img(src="assets/images/database22.png", alt="database")
+                                        br 
+                                        | 20 GB STORAGE 
+                                    div.col-md-6
+                                        img(src="assets/images/email162.png", alt="email")
+                                        br 
+                                        | 100 EMAILS
+                            div.order
+                                | ORDER NOW
+        section#contact
+            div.container-fluid
+                div.row
+                    div.col-md-8
+                        +title-section('Contact','Us')
+                        p.p-style We love being a web designer and we are incredibly thankful that we decided to join this industry many years
+                         br 
+                         | ago. Contact us so we can help better.
+                        input(type="text" placeholder="Name*")
+                        br
+                        input(type="text" placeholder="Email*")
+                        br
+                        input(type="text" placeholder="Subject")
+                        br
+                        textarea(type="text" placeholder="Message*")
+                        br
+                        button.submit
+                            | SUBMIT
+                    div.col-md-4
+                        div.row.contact-info
+                            h5 CONTACT INFO
+                            h6 1455 19th St.
+                             br 
+                             |Santa Monica, CA 90404
+                        div.row.email
+                            h5 EMAIL: 
+                             span yourmail@yourdomain.com
+                            h5 PHONE: 
+                             span +88 (0) 101 0000 000
+                            h5 FAX: 
+                             span +88 (0) 202 0000 001
+                        div.row.conect-us
+                            h5 CONNECT WITH US 
+                            i.fa.fa-facebook
+                            i.fa.fa-twitter
+                            i.fa.fa-google
+                            i.fa.fa-pinterest
+                            i.fa.fa-linkedin
+                        div.row
+                            h6.company Our Company Mision
+                        div.row
+                            h6.company Company Philosophy
+                        div.row
+                            h6.company Company Promise
+        footer 
+            div.container-fluid
+                div.row
+                    div.col-md-2
+                        img(src="assets/images/w-logo.jpg", alt="logo")
+                    div.col-md-8
+                        h6 COPYRIGHT2016. WILLI LAB LIMITED
+                        h6 DESIGNED AND DEVELOPED BY 
+                         span WILLYLAB
+                    div.col-md-2 
+                        i.fa.fa-facebook
+                        i.fa.fa-twitter
+                        i.fa.fa-google
+                        i.fa.fa-pinterest
+
+
+
+
+
